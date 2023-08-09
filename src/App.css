@@ -1,0 +1,79 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica;
+}
+.header {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+}
+.fg {
+  flex-grow: 1;
+}
+.bar {
+  background-color: #555;
+  color: white;
+  padding: 1rem;
+}
+.lr {
+  display: flex;
+}
+.partsList {
+  width: 10rem;
+  padding: 1rem;
+}
+.build {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.partsListTable {
+  border: 1px solid black;
+}
+.partsListItem {
+  border-top: 1px solid black;
+  padding: 0.5rem;
+}
+.partsListItem.selected {
+  background-color: black;
+  color: white;
+}
+.partsListItem:first-child {
+  border-top: none;
+}
+.build h1 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+.logo {
+  font-weight: bold;
+}
+
+.user, .region, .darkMode {
+  margin-left: 1rem;
+}
+
+.componentRow {
+  display: flex;
+}
+.componentRow > div {
+  padding: 0.5rem;
+}
+.componentRowComponent {
+  flex: 0 0 6rem;
+  overflow: hidden;
+}
+.componentRowSelection {
+  flex-grow: 1;
+}
+.componentRowPrice {
+  flex: 0 0 6rem;
+}
+.ch {
+  font-size: 1rem;
+  font-weight: bold;
+}
