@@ -133,8 +133,10 @@ const ComponentRow: FC<{
   return (
     <div className="componentRow">
       <div className="componentRowComponent">{component}</div>
+      <div className="componentRowSelectionAndPrice">
       <div className="componentRowSelection">{selection}</div>
       <div className="componentRowPrice">{price}</div>
+        </div>
     </div>
   );
 };
@@ -170,12 +172,36 @@ const Component: FC = ({ c }) => {
 const Selection: FC = ({ s }) => {
   return (
     <div>
+      <div>
       {s.quantity}x <img src={s.product.avatarUrl} /> {s.product.name}{" "}
       {s.product.rating}/5
+        </div>
+      {s.product.alternativesList?.length ? <Alternatives alts={s.product.alternativesList}/> : null}
     </div>
   );
 };
 
+const Alternatives: FC = ({ alts }) => {
+  return <div className="alternatives">
+    Alternatives:<br />
+    <div className="alternativesList">
+    {alts.map(alt => <Alt alt={alt} />)}
+    </div>
+  </div>
+}
+
+const Alt: FC = ({alt}) => {
+  return <div className="alternative">
+    <div className="avatar"><img src={alt.product.avatarUrl} /></div>
+    <div className="detail">
+      <div className="detailName">
+    {alt.product.name}</div>
+      <div className="detailPrice">
+    {alt.product.bestPrice}</div>
+      
+    </div>
+  </div>
+}
 const CH: FC = ({ children }) => {
   return <span className="ch">{children}</span>;
 };

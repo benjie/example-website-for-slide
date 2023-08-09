@@ -67,6 +67,10 @@ html, body {
   flex: 0 0 6rem;
   overflow: hidden;
 }
+.componentRowSelectionAndPrice {
+  display: flex;
+  flex: 1 0 0;
+}
 .componentRowSelection {
   flex-grow: 1;
 }
@@ -76,4 +80,29 @@ html, body {
 .ch {
   font-size: 1rem;
   font-weight: bold;
+}
+
+.alternatives {
+  background-color: #eee;  
+}
+.alternativesList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alternative {
+  background-color: #ccc;
+  border-radius: 5px;
+  display: flex;
+  margin: 0.5rem;
+  width: calc(10rem + 0.5rem + 0.5rem + 0.5rem + 50px)
+}
+.alternative > .avatar {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  flex: 0 0 50px;
+}
+.alternative > .detail {
+  padding: 0.5rem;
+  flex: 0 0 10rem;
+  overflow: hidden;
 }
